@@ -1,0 +1,40 @@
+{
+  "profile_id": "profile_5",
+  "name": "Даня, 23 года",
+  "segment": "молодой специалист / студент заочно",
+  "today": "2026-09-26",
+  "balance": 4800,
+  "next_income_date": "2026-10-02",
+  "income": [
+    {"date": "2026-09-05", "source": "зарплата", "amount": 28000},
+    {"date": "2026-09-01", "source": "стипендия", "amount": 2000}
+  ],
+  "subscriptions": [
+    {"name": "Аренда (доля)", "amount": 12000, "next_payment": "2026-10-01"},
+    {"name": "Мобильная связь", "amount": 600, "next_payment": "2026-09-28"},
+    {"name": "Интернет", "amount": 500, "next_payment": "2026-09-30"}
+  ],
+  "goal": {
+    "name": "подушка безопасности",
+    "target": 50000,
+    "saved": 5000
+  },
+  "transactions": [
+    {"date": "2026-09-15", "category": "еда", "amount": 1200, "description": "продукты на неделю"},
+    {"date": "2026-09-16", "category": "транспорт", "amount": 150, "description": "такси"},
+    {"date": "2026-09-17", "category": "еда", "amount": 450, "description": "обед"},
+    {"date": "2026-09-17", "category": "кофе", "amount": 250, "description": "кофе"},
+    {"date": "2026-09-18", "category": "маркетплейс", "amount": 4500, "description": "кроссовки"},
+    {"date": "2026-09-19", "category": "доставка", "amount": 1100, "description": "доставка"},
+    {"date": "2026-09-20", "category": "еда", "amount": 380, "description": "продукты"},
+    {"date": "2026-09-20", "category": "кредитка", "amount": 5000, "description": "техника в рассрочку"},
+    {"date": "2026-09-21", "category": "развлечения", "amount": 2000, "description": "бар с друзьями"},
+    {"date": "2026-09-22", "category": "еда", "amount": 400, "description": "обед"},
+    {"date": "2026-09-23", "category": "транспорт", "amount": 100, "description": "метро"},
+    {"date": "2026-09-24", "category": "еда", "amount": 520, "description": "продукты"},
+    {"date": "2026-09-25", "category": "кофе", "amount": 190, "description": "кофе"},
+    {"date": "2026-09-25", "category": "доставка", "amount": 780, "description": "доставка"},
+    {"date": "2026-09-26", "category": "еда", "amount": 350, "description": "обед"},
+    {"date": "2026-09-26", "category": "транспорт", "amount": 100, "description": "метро"}
+  ]
+}

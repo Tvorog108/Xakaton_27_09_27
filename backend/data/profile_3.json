@@ -1,0 +1,25 @@
+{
+  "profile_id": "profile_3",
+  "name": "Илья, 19 лет",
+  "segment": "студент с нерегулярным доходом",
+  "today": "2026-09-26",
+  "balance": 1500,
+  "next_income_date": null,
+  "income": [
+    {"date": "2026-09-05", "source": "стипендия", "amount": 3500}
+  ],
+  "subscriptions": [
+    {"name": "Мобильная связь", "amount": 350, "next_payment": "2026-09-28"}
+  ],
+  "goal": null,
+  "transactions": [
+    {"date": "2026-09-18", "category": "еда", "amount": 300, "description": "обед"},
+    {"date": "2026-09-19", "category": "транспорт", "amount": 100, "description": "метро"},
+    {"date": "2026-09-20", "category": "еда", "amount": 280, "description": "продукты"},
+    {"date": "2026-09-21", "category": "кофе", "amount": 200, "description": "кофе"},
+    {"date": "2026-09-22", "category": "еда", "amount": 320, "description": "обед"},
+    {"date": "2026-09-24", "category": "еда", "amount": 290, "description": "продукты"},
+    {"date": "2026-09-25", "category": "транспорт", "amount": 100, "description": "метро"},
+    {"date": "2026-09-26", "category": "еда", "amount": 310, "description": "обед"}
+  ]
+}

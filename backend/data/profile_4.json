@@ -1,0 +1,40 @@
+{
+  "profile_id": "profile_4",
+  "name": "София, 21 год",
+  "segment": "студент с подработкой",
+  "today": "2026-09-26",
+  "balance": 12500,
+  "next_income_date": "2026-10-08",
+  "income": [
+    {"date": "2026-09-01", "source": "стипендия", "amount": 3500},
+    {"date": "2026-09-12", "source": "подработка", "amount": 15000},
+    {"date": "2026-09-20", "source": "подработка", "amount": 4000}
+  ],
+  "subscriptions": [
+    {"name": "Яндекс Плюс", "amount": 399, "next_payment": "2026-09-29"},
+    {"name": "Spotify", "amount": 169, "next_payment": "2026-10-02"},
+    {"name": "Мобильная связь", "amount": 550, "next_payment": "2026-10-01"}
+  ],
+  "goal": {
+    "name": "курс по дизайну",
+    "target": 25000,
+    "saved": 8000
+  },
+  "transactions": [
+    {"date": "2026-09-18", "category": "еда", "amount": 450, "description": "продукты"},
+    {"date": "2026-09-18", "category": "транспорт", "amount": 100, "description": "метро"},
+    {"date": "2026-09-19", "category": "кофе", "amount": 220, "description": "кофейня"},
+    {"date": "2026-09-19", "category": "еда", "amount": 380, "description": "обед"},
+    {"date": "2026-09-20", "category": "маркетплейс", "amount": 3200, "description": "наушники"},
+    {"date": "2026-09-21", "category": "еда", "amount": 300, "description": "продукты"},
+    {"date": "2026-09-21", "category": "доставка", "amount": 890, "description": "доставка"},
+    {"date": "2026-09-22", "category": "развлечения", "amount": 1200, "description": "кино и попкорн"},
+    {"date": "2026-09-23", "category": "еда", "amount": 410, "description": "обед"},
+    {"date": "2026-09-23", "category": "кофе", "amount": 180, "description": "кофе"},
+    {"date": "2026-09-24", "category": "транспорт", "amount": 100, "description": "метро"},
+    {"date": "2026-09-25", "category": "еда", "amount": 350, "description": "продукты"},
+    {"date": "2026-09-25", "category": "кофе", "amount": 200, "description": "кофе"},
+    {"date": "2026-09-26", "category": "еда", "amount": 320, "description": "обед"},
+    {"date": "2026-09-26", "category": "транспорт", "amount": 100, "description": "метро"}
+  ]
+}

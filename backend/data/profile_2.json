@@ -1,0 +1,44 @@
+{
+  "profile_id": "profile_2",
+  "name": "Максим, 22 года",
+  "segment": "студент с редкими подработками",
+  "today": "2026-09-26",
+  "balance": 2100,
+  "next_income_date": "2026-10-03",
+  "income": [
+    {"date": "2026-09-03", "source": "стипендия", "amount": 3500},
+    {"date": "2026-09-10", "source": "подработка", "amount": 6000}
+  ],
+  "subscriptions": [
+    {"name": "Музыка", "amount": 199, "next_payment": "2026-09-28"},
+    {"name": "Облако", "amount": 149, "next_payment": "2026-09-30"},
+    {"name": "Мобильная связь", "amount": 400, "next_payment": "2026-10-01"}
+  ],
+  "goal": {
+    "name": "поездка",
+    "target": 30000,
+    "saved": 3500
+  },
+  "transactions": [
+    {"date": "2026-09-15", "category": "еда", "amount": 400, "description": "продукты"},
+    {"date": "2026-09-15", "category": "транспорт", "amount": 120, "description": "автобус"},
+    {"date": "2026-09-16", "category": "еда", "amount": 350, "description": "обед"},
+    {"date": "2026-09-16", "category": "доставка", "amount": 950, "description": "доставка"},
+    {"date": "2026-09-17", "category": "еда", "amount": 280, "description": "продукты"},
+    {"date": "2026-09-17", "category": "маркетплейс", "amount": 2100, "description": "наушники"},
+    {"date": "2026-09-18", "category": "еда", "amount": 300, "description": "обед"},
+    {"date": "2026-09-18", "category": "развлечения", "amount": 700, "description": "бар"},
+    {"date": "2026-09-19", "category": "еда", "amount": 250, "description": "продукты"},
+    {"date": "2026-09-19", "category": "кофе", "amount": 220, "description": "кофе"},
+    {"date": "2026-09-20", "category": "еда", "amount": 320, "description": "обед"},
+    {"date": "2026-09-20", "category": "транспорт", "amount": 120, "description": "метро"},
+    {"date": "2026-09-21", "category": "еда", "amount": 280, "description": "продукты"},
+    {"date": "2026-09-21", "category": "доставка", "amount": 780, "description": "доставка"},
+    {"date": "2026-09-22", "category": "еда", "amount": 300, "description": "обед"},
+    {"date": "2026-09-22", "category": "кофе", "amount": 190, "description": "кофе"},
+    {"date": "2026-09-24", "category": "еда", "amount": 350, "description": "продукты"},
+    {"date": "2026-09-25", "category": "доставка", "amount": 820, "description": "доставка"},
+    {"date": "2026-09-26", "category": "еда", "amount": 280, "description": "обед"},
+    {"date": "2026-09-26", "category": "кофе", "amount": 200, "description": "кофе"}
+  ]
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0f0f0f">
+    <title>Дневной лимит — AI-помощник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+<header class="topbar">
+    <div class="logo">
+        <span class="logo-mark"></span>
+        <div class="logo-text">
+            <strong>Дневной лимит</strong>
+            <span class="logo-sub">AI · Т-Банк кейс</span>
+        </div>
+    </div>
+    <div class="profile-switcher" id="profileSwitcher"></div>
+</header>
+<main class="container">
+    <section class="screen active" id="screen-main">
+        <p class="tagline">При нерегулярном доходе — понятная сумма <em>на сегодня</em>, а не «бюджет на месяц»</p>
+
+        <div class="ai-brief" id="aiBrief">
+            <div class="ai-brief-head">
+                <div>
+                    <div class="ai-brief-kicker">Разбор на сегодня</div>
+                    <h3 class="ai-brief-title" id="aiBriefTitle">Загрузка анализа…</h3>
+                </div>
+            </div>
+            <p class="ai-brief-conclusion" id="aiBriefConclusion"></p>
+            <div class="ai-cards" id="aiCards"></div>
+        </div>
+
+        <div class="layout-main">
+            <div class="col-limit">
+                <div class="card card-hero">
+                    <div class="hero-ring-wrap">
+                        <svg class="hero-ring" viewBox="0 0 120 120">
+                            <circle class="ring-bg" cx="60" cy="60" r="52"/>
+                            <circle class="ring-fg" id="limitRingFg" cx="60" cy="60" r="52" stroke-dasharray="326.7" stroke-dashoffset="326.7"/>
+                        </svg>
+                        <div class="hero-ring-center">
+                            <div class="hero-label">Сегодня можно</div>
+                            <div class="hero-value" id="dailyLimit">—</div>
+                            <div class="hero-unit">₽</div>
+                        </div>
+                    </div>
+                    <div class="hero-sub" id="dailyLimitSub">Загрузка…</div>
+                    <div class="proactive-hint" id="proactiveHint"></div>
+                </div>
+                <div class="grid-2 stats-grid">
+                    <div class="card mini"><div class="card-label">Баланс</div><div class="card-value" id="balance">—</div></div>
+                    <div class="card mini"><div class="card-label">До дохода</div><div class="card-value" id="daysLeft">—</div></div>
+                    <div class="card mini"><div class="card-label">Подписки</div><div class="card-value" id="subscriptions">—</div></div>
+                    <div class="card mini"><div class="card-label">Резерв</div><div class="card-value" id="reserve">—</div></div>
+                </div>
+            </div>
+            <div class="col-side">
+                <div class="card chart-card">
+                    <div class="card-title-row">
+                        <h3>Куда уходят деньги</h3>
+                        <button type="button" class="link-btn" data-goto="categories">Все →</button>
+                    </div>
+                    <div class="donut-wrap">
+                        <svg id="mainDonut" class="donut" viewBox="0 0 200 200"></svg>
+                        <div class="donut-center">
+                            <div class="donut-total" id="donutTotal">—</div>
+                            <div class="donut-label">всего трат</div>
+                        </div>
+                    </div>
+                    <div class="donut-legend" id="donutLegend"></div>
+                    <div class="donut-tooltip" id="donutTooltip" hidden></div>
+                </div>
+                <div class="card whatif-card">
+                    <h3>Что если потрачу…</h3>
+                    <p class="whatif-hint">Как покупка изменит лимит на оставшиеся дни</p>
+                    <div class="whatif-row">
+                        <input type="number" id="whatIfAmount" min="1" step="100" placeholder="Сумма, ₽" inputmode="numeric">
+                        <button type="button" id="whatIfBtn">Посчитать</button>
+                    </div>
+                    <div class="whatif-result" id="whatIfResult" hidden></div>
+                </div>
+            </div>
+        </div>
+        <div class="card tip-card">
+            <div class="tip-icon">💡</div>
+            <div class="tip-text">
+                <strong>Зачем приложение?</strong>
+                Стипендия и подработки приходят неровно — «откладывай 20%» не работает.
+                Здесь безопасная сумма <em>на сегодня</em>, структура трат и подсказка до следующего поступления.
+            </div>
+        </div>
+    </section>
+    <section class="screen" id="screen-categories">
+        <h2>Структура трат</h2>
+        <div class="layout-split">
+            <div class="card chart-card">
+                <div class="donut-wrap large">
+                    <svg id="catsDonut" class="donut" viewBox="0 0 200 200"></svg>
+                    <div class="donut-center">
+                        <div class="donut-total" id="categoriesTotal">—</div>
+                        <div class="donut-label">всего</div>
+                    </div>
+                </div>
+                <div class="donut-legend" id="catsLegend"></div>
+            </div>
+            <div id="categoriesList" class="categories-list"></div>
+        </div>
+    </section>
+    <section class="screen" id="screen-goal">
+        <h2>Цель накопления</h2>
+        <div id="goalContent" class="goal-wrap"></div>
+    </section>
+    <section class="screen" id="screen-risks">
+        <h2>Риски и ограничения</h2>
+        <div id="risksList" class="risks-list"></div>
+        <h3 class="section-sub">Что продукт не делает</h3>
+        <div class="card limits-card limits-grid">
+            <div class="limit-item"><div class="limit-icon">✕</div><div><div class="limit-title">Не инвестсоветы</div><div class="limit-sub">Не рекомендует акции и крипту</div></div></div>
+            <div class="limit-item"><div class="limit-icon">✕</div><div><div class="limit-title">Не операции с деньгами</div><div class="limit-sub">Не переводит и не списывает</div></div></div>
+            <div class="limit-item"><div class="limit-icon">✕</div><div><div class="limit-title">Не решает за вас</div><div class="limit-sub">Даёт цифры — решение за вами</div></div></div>
+            <div class="limit-item"><div class="limit-icon">!</div><div><div class="limit-title">Синтетические данные</div><div class="limit-sub">Демо-профили, не реальный банк</div></div></div>
+        </div>
+    </section>
+    <section class="screen" id="screen-chat">
+        <div class="chat-layout">
+            <div class="chat-side">
+                <h2>Спросить подробно</h2>
+                <div class="chat-disclaimer">Можно спросить своими словами. Ответ строится по твоим данным профиля.</div>
+                <div class="quick-chips" id="quickChips">
+                    <button type="button" class="chip" data-q="Сколько я могу потратить сегодня?">Лимит на сегодня</button>
+                    <button type="button" class="chip" data-q="Куда уходят деньги?">Куда уходят деньги</button>
+                    <button type="button" class="chip" data-q="Сколько копить на цель?">Сколько копить</button>
+                    <button type="button" class="chip" data-q="Что если потратить 1000 рублей?">Что если 1000 ₽</button>
+                    <button type="button" class="chip" data-q="Что такое льготный период?">Льготный период</button>
+                    <button type="button" class="chip" data-q="Есть ли риски?">Риски</button>
+                </div>
+                <div class="mode-badge" id="modeBadge" hidden></div>
+            </div>
+            <div class="chat-main">
+                <div class="chat-box" id="chatBox">
+                    <div class="chat-message chat-assistant">Привет! Спроси про лимит, траты, цель или «что если куплю…».</div>
+                </div>
+                <form class="chat-form" id="chatForm">
+                    <input type="text" id="chatInput" placeholder="Напиши вопрос…" autocomplete="off">
+                    <button type="submit" id="chatSend" aria-label="Отправить">→</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+<nav class="bottom-nav">
+    <button class="nav-btn active" data-screen="main"><span class="nav-ico">◎</span><span>Главная</span></button>
+    <button class="nav-btn" data-screen="categories"><span class="nav-ico">◇</span><span>Траты</span></button>
+    <button class="nav-btn" data-screen="goal"><span class="nav-ico">☆</span><span>Цель</span></button>
+    <button class="nav-btn" data-screen="risks"><span class="nav-ico">⚠</span><span>Риски</span></button>
+    <button class="nav-btn" data-screen="chat"><span class="nav-ico">💬</span><span>Чат</span></button>
+</nav>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

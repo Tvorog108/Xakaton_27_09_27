@@ -1,0 +1,47 @@
+{
+  "profile_id": "profile_1",
+  "name": "Аня, 20 лет",
+  "segment": "студент с нерегулярным доходом",
+  "today": "2026-09-26",
+  "balance": 8400,
+  "next_income_date": "2026-10-05",
+  "income": [
+    {"date": "2026-09-01", "source": "стипендия", "amount": 3500},
+    {"date": "2026-09-14", "source": "подработка", "amount": 12000}
+  ],
+  "subscriptions": [
+    {"name": "Яндекс Плюс", "amount": 399, "next_payment": "2026-09-28"},
+    {"name": "Мобильная связь", "amount": 500, "next_payment": "2026-09-30"}
+  ],
+  "goal": {
+    "name": "ноутбук",
+    "target": 60000,
+    "saved": 12000
+  },
+  "transactions": [
+    {"date": "2026-09-15", "category": "еда", "amount": 380, "description": "обед в столовой"},
+    {"date": "2026-09-15", "category": "кофе", "amount": 180, "description": "кофе с собой"},
+    {"date": "2026-09-15", "category": "транспорт", "amount": 100, "description": "метро"},
+    {"date": "2026-09-16", "category": "еда", "amount": 250, "description": "продукты"},
+    {"date": "2026-09-16", "category": "доставка", "amount": 890, "description": "доставка еды"},
+    {"date": "2026-09-16", "category": "маркетплейс", "amount": 1200, "description": "кроссовки"},
+    {"date": "2026-09-17", "category": "еда", "amount": 420, "description": "обед"},
+    {"date": "2026-09-17", "category": "кофе", "amount": 200, "description": "кофе"},
+    {"date": "2026-09-17", "category": "транспорт", "amount": 100, "description": "метро"},
+    {"date": "2026-09-18", "category": "еда", "amount": 300, "description": "продукты"},
+    {"date": "2026-09-18", "category": "развлечения", "amount": 500, "description": "кино"},
+    {"date": "2026-09-19", "category": "доставка", "amount": 1100, "description": "доставка еды"},
+    {"date": "2026-09-19", "category": "кофе", "amount": 250, "description": "кофе"},
+    {"date": "2026-09-20", "category": "еда", "amount": 350, "description": "продукты"},
+    {"date": "2026-09-20", "category": "маркетплейс", "amount": 800, "description": "футболка"},
+    {"date": "2026-09-21", "category": "еда", "amount": 280, "description": "обед"},
+    {"date": "2026-09-21", "category": "транспорт", "amount": 100, "description": "метро"},
+    {"date": "2026-09-22", "category": "еда", "amount": 350, "description": "обед"},
+    {"date": "2026-09-22", "category": "кофе", "amount": 180, "description": "кофе"},
+    {"date": "2026-09-24", "category": "еда", "amount": 420, "description": "продукты"},
+    {"date": "2026-09-25", "category": "доставка", "amount": 750, "description": "доставка"},
+    {"date": "2026-09-26", "category": "еда", "amount": 310, "description": "обед"},
+    {"date": "2026-09-26", "category": "кофе", "amount": 190, "description": "кофе"},
+    {"date": "2026-09-20", "category": "кредитка", "amount": 2500, "description": "покупка с кредитки"}
+  ]
+}
